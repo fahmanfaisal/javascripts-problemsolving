@@ -1,0 +1,37 @@
+<!-- simple " * " and " / " calculator -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Simle calculator</title>
+</head>
+<body>
+    <div class="mx-auto bg-blue-700 py-4">
+        <nav class="p-2 flex-1 items-center px-20">
+            <p class="text-4xl text-white text-center font-semibold">A simple calculator   </p>
+            <p class="text-sm text-white text-center pt-4">JavaScript program to calculate multiplication and division of two numbers </p>
+        </nav>
+    </div>
+    <div class="mx-auto bg-gray-300 py-2">
+        <form action="" class="text-center md:px-20">
+            1st Number : <input class="my-2 mx-2 p-1 rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" id="firstNumber" /><br>
+            2nd Number: <input class="my-2 mx-2 p-1 rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" id="secondNumber" /><br>
+            <input class="my-4 ml-16 py-2 px-3 text-base text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50" type="button" onClick="multiplyBy()" Value="Multiply" />
+            <input class="my-4 ml-2 py-2 px-3 text-base text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50" type="button" onClick="divideBy()" Value="Divide" />
+        </form>
+        <p class="text-center md:px-20 text-2xl ml-14 pb-2 text-red-600 font-semibold">The Result is : <br>
+            <span id = "result"></span>
+        </p>
+        <div class="py-4 text-center" type="button" onClick="reset()">
+            <button class="py-2 px-3 text-2xl text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50">
+                Reset
+            </button>
+        </div>
+    </div>
+</body>
+</html>
