@@ -9,6 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Simle calculator</title>
+    <script>
+        function multiplyBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+        function divideBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+        function reset() {
+            document.getElementById('firstNumber').value = '';
+            document.getElementById('secondNumber').value = '';
+        }
+    </script>
 </head>
 <body>
     <div class="mx-auto bg-blue-700 py-4">
@@ -19,17 +35,17 @@
     </div>
     <div class="mx-auto bg-gray-300 py-2">
         <form action="" class="text-center md:px-20">
-            1st Number : <input class="my-2 mx-2 p-1 rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" id="firstNumber" /><br>
-            2nd Number: <input class="my-2 mx-2 p-1 rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" id="secondNumber" /><br>
+            1st Number : <input id="firstNumber" class="my-2 mx-2 p-1 rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" id="firstNumber" /><br>
+            2nd Number: <input id="secondNumber" class="my-2 mx-2 p-1 rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" id="secondNumber" /><br>
             <input class="my-4 ml-16 py-2 px-3 text-base text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50" type="button" onClick="multiplyBy()" Value="Multiply" />
             <input class="my-4 ml-2 py-2 px-3 text-base text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50" type="button" onClick="divideBy()" Value="Divide" />
         </form>
         <p class="text-center md:px-20 text-2xl ml-14 pb-2 text-red-600 font-semibold">The Result is : <br>
             <span id = "result"></span>
         </p>
-        <div class="py-4 text-center" type="button" onClick="reset()">
-            <button class="py-2 px-3 text-2xl text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50">
-                Reset
+        <div class="py-4 text-center" type="button">
+            <button onClick="reset()" class="py-1 px-2 text-md text-white rounded  bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-50">
+                Reset Field
             </button>
         </div>
     </div>
